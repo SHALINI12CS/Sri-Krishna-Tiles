@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sri Krishna Tiles</title>
+    <!-- CSS FILES -->                
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/vegas.min.css" rel="stylesheet">
+    <link href="css/tooplate-tiles.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="sticky-wrapper" class="sticky-wrapper" style="height: 154px;">
+            <nav class="navbar navbar-expand-lg"> 
+                <div class="container">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
+                        SRI KRISHNA TILES
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="tiles.html">Tiles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="review.html">Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll active" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section class="contact-section section-padding" id="contact.html">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12">
+                        <em class="text-white">Say Hello</em>
+                        <h2 class="text-white mb-4 pb-lg-2">Contact Us</h2>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <form action="/send_message" method="post" class="custom-form contact-form" role="form" onsubmit="return validateForm()">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder=" " required>
+                                    <span id="nameError" class="text-danger"></span>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="" required>
+                                    <span id="emailError" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">How can we help?</label>
+                                    <textarea name="message" rows="4" class="form-control" id="message" placeholder="Message" required></textarea>
+                                    <span id="messageError" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-12 mx-auto mt-3">
+                                <button type="submit" class="form-control">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.4382978106028!2d78.03872977486998!3d9.89740529020281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00cf6745b733e3%3A0x3935206e72fb1be5!2sSri%20Krishna%20Tiles!5e0!3m2!1sen!2sin!4v1721233308705!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            function validateForm() {
+                let valid = true;
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (name.trim() === '') {
+                    document.getElementById('nameError').textContent = 'Name is required.';
+                    valid = false;
+                } else {
+                    document.getElementById('nameError').textContent = '';
+                }
+
+                if (email.trim() === '') {
+                    document.getElementById('emailError').textContent = 'Email is required.';
+                    valid = false;
+                } else {
+                    document.getElementById('emailError').textContent = '';
+                }
+
+                if (message.trim() === '') {
+                    document.getElementById('messageError').textContent = 'Message is required.';
+                    valid = false;
+                } else {
+                    document.getElementById('messageError').textContent = '';
+                }
+
+                return valid;
+            }
+        </script>
+
+        <footer class="site-footer" style="background-color: #BC6C25;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-12 me-auto">
+                        <em class="text-white d-block mb-4">Where to find us?</em>
+                        <strong class="text-white">
+                             
+                            Sri Krishna Tiles, NH 44, Thanakkankulam, Madurai, Tamil Nadu 625006, India
+                        </strong>
+                    </div>
+                    <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
+                        <em class="text-white d-block mb-4">Contact</em>
+                        <p class="d-flex mb-1">
+                            <strong class="me-2">Phone:</strong>
+                            <a href="tel:305-240-9671" class="site-footer-link">(91) 305 2409 671</a>
+                        </p>
+                        <p class="d-flex">
+                            <strong class="me-2">Email:</strong>
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">sriktiles@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <em class="text-white d-block mb-4">Opening Hours.</em>
+                        <ul class="opening-hours-list">
+                            <li class="d-flex">
+                                Monday - Saturday
+                                <span class="underline"></span>
+                                <strong>9:00 - 8:00</strong>
+                            </li>
+                            <li class="d-flex">
+                                Sunday
+                                <span class="underline"></span>
+                                <strong>Closed</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="index.html" target="_blank" class="social-icon-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="index.html" target="_blank" class="social-icon-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="index.html" target="_blank" class="social-icon-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p class="copyright-text">&copy; 2024 Sri Krishna Tiles | Designed by <a href="index.html">Company</a></p>
+        </div>
+    </footer>
+</body>
+</html>
