@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Sri Krishna Traders</title>
+
+        <!-- CSS FILES -->                
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/tiles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="icon" type="image/x-icon" href="images/tilesicon.ico">
+
+<style>
+.title{
+    color:#FFFDD0;
+}
+
+.link-container {
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+}
+.glow-text {
+    color: white;
+    font-size: 1em;
+    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #00f, 0 0 25px #00f, 0 0 30px #00f, 0 0 35px #00f;
+}
+/* Add this CSS to your stylesheet */
+.tile-block-wrap {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 3s ease-out;
+}
+
+.tile-block-wrap.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+</style>
+    </head>
+<body>
+                
+            <main>
+
+               <div id="sticky-wrapper" class="sticky-wrapper" style="height: 154px;"><nav class="navbar navbar-expand-lg"> 
+                                
+                    <div class="container">
+
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                                                        SRI KRISHNA TRADERS
+                        </a>
+        
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="index.html">Home</a>
+                                </li>
+        
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="about.html">About</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll active" href="tiles.html">Tiles</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link click-scroll inactive" href="https://online.fliphtml5.com/rafcv/ibuk/">Catalogue</a>
+                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="review.html">Reviews</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll inactive" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+
+                           
+                        
+                    </div>
+                </nav></div>
+
+<section class="tiles-section section-padding section-bg animate__animated" id="tiles.html">
+                    <div class="container">
+                        <div class="row justify-content-center">
+
+                            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                                <em class="text-white">Creative Designs</em>
+
+                                <h2 class="text-white">Tiles Categories</h2>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Kitchen Tiles</h4>
+
+                                        </div>
+
+                                        <p class="text-white mb-0">"Tiles that elevate every space."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/kitchen_tiles1.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Bedroom Tiles</h4>
+
+                                           
+                                        </div>
+
+                                        <p class="text-white mb-0">"Transform your bedroom into a serene retreat with our exquisite tiles."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/bedroom1_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                              <div class="col-lg-3 col-md-6 col-12">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Entryway Tiles</h4>
+
+                                           
+                                        </div>
+
+                                        <p class="text-white mb-0">"Make a grand entrance with our stunning entryway tiles."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/entryway_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Bathroom Tiles</h4>
+
+                                           
+                                        </div>
+
+                                        <p class="text-white mb-0">"Transform your bathroom into a spa oasis with our elegant and durable tiles."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/bathroom_tiles.jpg" class="team-block-image img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+
+                       
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Living Room Tiles</h4>
+
+                                            
+                                        </div>
+
+                                        <p class="text-white mb-0">"Transform your living room into a stylish haven with our exquisite tile collection."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/living_room_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="team-block-wrap animate__animated">
+                                    <div class="team-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <h4 class="text-white mb-0">Outdoor Tiles</h4>
+
+                                            
+                                        </div>
+
+                                        <p class="text-white mb-0">"Durable Elegance for Your Outdoors."</p>
+                                    </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/outdoor_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+<section class="tile-section section-padding section-bg" style="background-color:saddlebrown;">
+                    <div class="container">
+                        <div class="row justify-content-center">
+
+                            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
+                               <h2 class="text-white">Explore</h2>
+                                <h2 class="text-white">Tiles Varieties</h2>
+                           </div>
+                     
+                           
+                           
+                           <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <a href="porcelain_tiles.html" class="link-container">
+                                          <h4 class="title">Porcelain Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>   
+                                        </div>
+
+                                      </div>
+
+                                    <div class="tile-block-image-wrap">
+                                         <img src="images/porcelain_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <a href="ceramic_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Ceramic Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>      
+                                       </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/ceramic_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="vitrified_tiles.html" class="link-container">
+                                          <h4 class="title">Vitrified Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/vitrified_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="glass_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Glass Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/glass_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="naturalstone_tiles.html" class="link-container">
+                                          <h4 class="title">Natural Stone Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/natural_stone_tile.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                          <a href="mosaic_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Mosaic Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a> 
+                                              
+                                        </div>
+
+                                      </div>
+
+                                    
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/mosaic_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="cement_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Cement Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a> 
+   
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/cement_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="terracotta_tile.html" class="link-container">
+                                          <h4 class="title">Terracotta Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a> 
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/terracotta_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                             
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <a href="vinyl_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Vinyl Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/vinyl_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="woodendeck_tiles.html" class="link-container">
+                                          <h4 class="title">Wooden Deck Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>   
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/woodendeck_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            
+                                           <a href="granite_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Granite Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/granite_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <a href="wooden_tiles.html" class="link-container">
+                                          <h4 class="title">Wooden Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/wooden_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                            <a href="marble_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Marble Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                        <img src="images/marble_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12 mb-4">
+                                <div class="tile-block-wrap split-transition">
+                                    <div class="tile-block-info d-flex flex-column">
+                                        <div class="d-flex mt-auto mb-3">
+                                           <a href="quarry_tiles.html" class="link-container">
+                                          <h4 style="color: black;">Quarry Tiles</h4>
+                                      <span class="glow-text">Click here</span>
+                                          </a>    
+                                        </div>
+
+                                      </div>
+
+                                    <div class="team-block-image-wrap">
+                                       <img src="images/quarry_tiles.jpg" class="team-block-image img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+</main>
+    <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Tiles categories animations
+        var tilesSection = document.querySelector('.tiles-section');
+        var tilesCategories = tilesSection.querySelectorAll('.team-block-wrap');
+
+        new Waypoint({
+            element: tilesSection,
+            handler: function() {
+                tilesSection.classList.add('animate__fadeIn');
+                tilesCategories.forEach(category => {
+                    category.classList.add('animate__fadeInUp');
+                });
+            },
+            offset: '75%'
+        });
+
+    });
+</script>
+<script>
+// Add this JavaScript to your script file or within a <script> tag
+document.addEventListener("DOMContentLoaded", function() {
+    const tileBlocks = document.querySelectorAll('.tile-block-wrap');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    tileBlocks.forEach(tileBlock => {
+        observer.observe(tileBlock);
+    });
+});
+</script>
+
+ <footer class="footer pt-100" style="background: #f5f5f5">
+        <div class="container">
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-8">
+                    <div class="footer-logo">
+                        <img src="images/tilesicon.jpg" alt="kag"></a>
+                    </div>
+                    <p class="footer-desc" style="margin-top: 50px;font-size:18px;">
+                        Address: No 3/357, KAG TILES - SRI KRISHNA TRADERS TIRUPUR(Hr Sec School opp) Mangalam, Pudupalayam, Tamil Nadu 641663
+
+                        <span style="margin-top: 15px"><br>
+                        Phone Number: <b><a href="tel: 07405166463">  07405166463</a>&nbsp; | &nbsp;<a href="tel:+917228922222">+91 7228922222</a>&nbsp; | &nbsp;
+                        <a href="https://wa.me/91 7405166463?text=" target="_blank"><i class="fab fa-whatsapp wpp" style="font-size:20px;"></i> +91  7405166463</a></b><br>
+                        Email Id: <b><a href="mailto:sriktiles@gmail.com">sriktiles@gmail.com</a></b>
+                        <br><br>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-4 footer-box" style="padding:20px">
+                    <span style="color: #676767">QUICK LINKS</span><br>
+                    <a href="index.html">HOME</a> &nbsp;|&nbsp; <a href="about.html">ABOUT</a> &nbsp;|&nbsp; <a href="tiles.html">TILES</a> &nbsp;|&nbsp; <a href="gallery.html">GALLERY</a> &nbsp;|&nbsp; <a href="https://online.fliphtml5.com/rafcv/ibuk/">CATALOGUE</a> &nbsp;|&nbsp; <a href="review.html">REVIEW</a> &nbsp;|&nbsp; <a href="contact.html">CONTACT</a><br>
+                    <br>
+                    <span style="color: #676767">PRODUCTS</span><br>
+                    <p style="font-size:16px;">
+                        <a href="vitrified_tiles.html">VITRIFIED TILES</a> &nbsp;|&nbsp; <a href="mosaic_tiles.html">MOSAIC TILES</a> &nbsp;|&nbsp; <a href="glass_tiles.html">GLASS TILES</a> &nbsp;|&nbsp; <a href="marble_tiles.html">MARBLE TILES</a><br>
+                        <a href="porcelain_tiles.html">PORCELAIN TILES</a> &nbsp;|&nbsp; <a href="cement_tiles.html">CEMENT TILES</a> &nbsp;|&nbsp; <a href="wooden_tiles.html">WOODEN TILES</a><br>
+                        <br>
+                       </p>
+                </div>
+            </div>
+            <div class="copy-right pt-50" style="border-top: 1px solid rgb(51 51 51 / 22%); padding-bottom: 30px;">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12" style="padding-bottom: 10px;">
+                        <ul>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-facebook" aria-hidden="true" title="Facebook"></i></a></li>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true" title="Whatsapp"></i></a></li>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-instagram" aria-hidden="true" title="Instagram"></i></a></li>
+                          <li><a href="index.html" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true" title="Pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <img src="images/certi.png" class="pull-right" alt="certificate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section style="background:#000;padding-bottom: 10px; padding-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy-right">
+                        <a href="contact.html">Contact Us</a> &nbsp;|&nbsp; <a href="tiles.html">Tiles Map</a>
+                    </div>
+                </div>
+                <footer class="site-footer">
+        
+            <p class="copyright-text" style="text-align:right;">&copy; 2024 Sri Krishna Traders.All Rights Reserved | Designed by <a href="index.html">Company</a></p>
+       
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vitrified Tiles</title>
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/tiles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/tilesicon.ico">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+.tiles-section {
+    padding: 60px 0;
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-container {
+    text-align: center;
+    background: linear-gradient(45deg, #00000069, #00000069), url('https://www.kagindia.com/catalog/view/image/tilespage/kagtiles.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0px;"
+  }
+
+
+.header-container p {
+    font-size: 1.4em;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
+
+.product-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd; 
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeUp 3.0s forwards; 
+    padding: 10px; 
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 8; /* Fade in */
+        transform: translateY(0); 
+    }
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transform: scale(1.05) translateY(-10px); 
+    background: rgba(255, 255, 255, 1); 
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.5s;
+    border: 2px solid #ddd; 
+    padding: 5px; 
+}
+
+.product-card:hover .product-image {
+    opacity: 0.8; /* Slightly darken image on hover */
+    transform: scale(1.1); /* Slightly zoom in image on hover */
+}
+
+.product-info {
+    padding: 16px;
+    transition: 0.5s;
+}
+
+.product-card:hover .product-info {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+    animation: fadeIn 3s; 
+}
+
+.product-description {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Add this to your styles.css */
+
+.modal-body p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.modal-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-body ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body ul li i {
+    margin-right: 0.5rem;
+    color: #007bff; /* Adjust color as needed */
+}
+
+
+.custom-btn {
+    background-color: #ff5733; /* New background color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #e94e30; 
+    transform: scale(1.05); 
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 3;
+        transform: translateY(0);
+    }
+}
+/* Navbar Styles */
+.navbar {
+    padding: 8px 20px; 
+    background-color: #ffffff; 
+    border-bottom: 1px solid #ddd; /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for a slight lift effect */
+}
+
+.navbar-brand {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: #333; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.navbar-brand:hover {
+    color: #4ce8d8; 
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px; 
+}
+
+.navbar-nav .nav-link {
+    font-size: 1em; 
+    color: #555; 
+    padding: 8px 15px; 
+    text-decoration: none; 
+    transition: color 0.3s ease, text-decoration 0.3s ease; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4ce8d8; 
+    background-color: #f8f9fa; 
+    border-radius: 5px; 
+    text-decoration: underline; 
+}
+
+.navbar-toggler {
+    border: none; 
+}
+
+.navbar-toggler-icon {
+    background-image: url('images/tilesicon.ico'); /* Custom icon or default Bootstrap icon */
+}
+@media (max-width: 768px) {
+    /* Center navbar brand on smaller screens */
+    .navbar-brand {
+        text-align: center;
+        width: 100%;
+    }
+    /* Stack navbar items vertically */
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+    .nav-item {
+        margin: 0;
+    }
+    .nav-link {
+        padding: 10px 0;
+    }
+}
+@media (max-width: 575.98px) {
+    #animated-text {
+        font-size: 1.8em; /* Extra small screens */
+    }
+}
+
+ </style>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="images/tilesicon.jpg" alt="Sri Krishna Tiles Logo" style="height: 60px;width: 80px; margin-right: 20px;">Sri Krishna Traders
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tiles.html">Tiles</a>
+            </li>
+           <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://online.fliphtml5.com/rafcv/ibuk/">Catalogue</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+</head>
+
+<body>
+
+        <main>
+ <div class="header-container">
+        <h1 class="animate__animated animate__fadeInDown"  id="animated-text" style="font-family: 'Le Jour Serif'; color:white;">VITRIFIED TILES</h1>
+        <p>Elegance in Every Surface: Discover Vitrified Tiles.</p>
+</div>
+       
+<section class="tiles-section section-padding">
+    <div class="container">
+        <div class="row">
+
+<!-- Product Card for Glazed Vitrified Tiles -->
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/glazed_vitrified.jpg" class="product-image img-fluid" alt="Glazed Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Glazed Vitrified Tiles</h4>
+            <p class="product-description">Stylish glazed finish with high durability.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#glazedVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Card for Full Body Vitrified Tiles -->
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/full_vitrified.jpg" class="product-image img-fluid" alt="Full Body Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Full Body Vitrified Tiles</h4>
+            <p class="product-description">Consistent color and texture of the tile.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#fullBodyVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Card for Polished Vitrified Tiles -->
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/polished_vitrified.png" class="product-image img-fluid" alt="Polished Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Polished Vitrified Tiles</h4>
+            <p class="product-description">High gloss finish for a luxurious look.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#polishedVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+
+<!-- Product Card for Double Charged Vitrified Tiles -->
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/double_vitrified.png" class="product-image img-fluid" alt="Double Charged Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Double Charged Vitrified Tiles</h4>
+            <p class="product-description">Thicker layer of pigment for a richer appearance.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#doubleChargedVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/rustic_vitrified.jpg" class="product-image img-fluid" alt="Rustic Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Rustic Vitrified Tiles</h4>
+            <p class="product-description">Featuring a textured surface perfect for creating a rugged and earthy look.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#rusticVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-12 mb-4">
+    <div class="product-card">
+        <img src="images/micro_crystal_vitrified.jpg" class="product-image img-fluid" alt="Micro Crystal Vitrified Tiles">
+        <div class="product-info">
+            <h4 class="product-title">Micro Crystal Vitrified Tiles</h4>
+            <p class="product-description">With a high-gloss finish and sparkling effect ,add a touch of elegance to space.</p>
+            <button class="btn custom-btn" data-toggle="modal" data-target="#microCrystalVitrifiedModal">View Details</button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!-- Modal for Glazed Vitrified Tiles -->
+<div class="modal fade" id="glazedVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="glazedVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="glazedVitrifiedModalLabel">Glazed Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/glazed_vitrified.jpg" class="img-fluid" alt="Glazed Vitrified Tiles">
+                <p>Glazed Vitrified Tiles offer a stylish finish with high durability, making them perfect for both residential and commercial spaces. They are resistant to stains and easy to clean.</p>
+                <p><i class="fas fa-tag"></i> Price: Rs.86 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-paint-roller"></i> Finish: Glazed</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 600x600 mm,600x1200 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: White, Beige, Grey</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#glazed-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Full Body Vitrified Tiles -->
+<div class="modal fade" id="fullBodyVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="fullBodyVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="fullBodyVitrifiedModalLabel">Full Body Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/full_vitrified.jpg" class="img-fluid" alt="Full Body Vitrified Tiles">
+                <p>Full Body Vitrified Tiles have a consistent color and texture throughout the tile, making them extremely durable and ideal for high traffic areas. They are resistant to scratches and stains.</p>
+                <p><i class="fas fa-tag"></i> Price: Rs.82 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-paint-roller"></i> Finish: Full Body</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 600x600 mm,800x2400 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: Dark Grey, Black, Brown</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#full-body-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Polished Vitrified Tiles -->
+<div class="modal fade" id="polishedVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="polishedVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="polishedVitrifiedModalLabel">Polished Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/polished_vitrified.png" class="img-fluid" alt="Polished Vitrified Tiles">
+                <p>Polished Vitrified Tiles feature a high gloss finish, giving a luxurious look to any space. They are perfect for areas where you want to add a touch of elegance and sophistication.</p>
+                <p><i class="fas fa-tag"></i> Price: $12 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-paint-roller"></i> Finish: Polished</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 800x800 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: White, Beige, Ivory</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#polished-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Double Charged Vitrified Tiles -->
+<div class="modal fade" id="doubleChargedVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="doubleChargedVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="doubleChargedVitrifiedModalLabel">Double Charged Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/double_vitrified.png" class="img-fluid" alt="Double Charged Vitrified Tiles">
+                <p>Double Charged Vitrified Tiles feature a thicker layer of pigment, providing a richer appearance and enhanced durability. They are ideal for both residential and commercial applications.</p>
+                <p><i class="fas fa-tag"></i> Price: Rs.121 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-paint-roller"></i> Finish: Double Charged</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 600x1200 mm,600X1200 mm,1200X1200 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: White, Black, Grey</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#double-charged-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Rustic Vitrified Tiles Modal -->
+<div class="modal fade" id="rusticVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="rusticVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rusticVitrifiedModalLabel">Rustic Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/rustic_vitrified.jpg" class="img-fluid" alt="Rustic Vitrified Tiles">
+                <p>Our Rustic Vitrified Tiles feature a unique texture that mimics the appearance of natural stone. Ideal for creating a warm, rugged look in both indoor and outdoor settings.</p>
+                <p><i class="fas fa-tag"></i> Price: $45 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-texture"></i> Texture: Rustic</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 600x600 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: Brown, Beige, Grey</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#rustic-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Micro Crystal Vitrified Tiles Modal -->
+<div class="modal fade" id="microCrystalVitrifiedModal" tabindex="-1" role="dialog" aria-labelledby="microCrystalVitrifiedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="microCrystalVitrifiedModalLabel">Micro Crystal Vitrified Tiles</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="images/micro_crystal_vitrified.jpg" class="img-fluid" alt="Micro Crystal Vitrified Tiles">
+                <p>Our Micro Crystal Vitrified Tiles feature a high-gloss surface with a sparkling effect. These tiles are perfect for adding a touch of elegance and shine to any interior space.</p>
+                <p><i class="fas fa-tag"></i> Price: $55 per sq. ft.</p>
+                <ul>
+                    <li><i class="fas fa-cogs"></i> Material: Vitrified</li>
+                    <li><i class="fas fa-tachometer-alt"></i> Finish: High-Gloss</li>
+                    <li><i class="fas fa-ruler-combined"></i> Size: 600x600 mm</li>
+                    <li><i class="fas fa-palette"></i> Color Options: White, Grey, Beige</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="tiles.html#micro-crystal-vitrified" class="btn custom-btn">More Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS and jQuery (necessary for modals) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const textElement = document.getElementById('animated-text');
+    const text = textElement.innerHTML;
+    textElement.innerHTML = '';
+
+    let index = 0;
+    function typeLetter() {
+        if (index < text.length) {
+            textElement.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeLetter, 100); // Adjust typing speed here
+        }
+    }
+
+    typeLetter();
+});
+</script>
+
+    <script>
+        function openModal(id) {
+            var modal = document.getElementById('myModal' + id);
+            modal.style.display = 'block';
+        }
+
+        function closeModal(id) {
+            var modal = document.getElementById('myModal' + id);
+            modal.style.display = 'none';
+        }
+    </script>
+ <footer class="footer pt-100" style="background: #f5f5f5">
+        <div class="container">
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-8">
+                    <div class="footer-logo">
+                        <img src="images/tilesicon.jpg" alt="kag"></a>
+                    </div>
+                    <p class="footer-desc" style="margin-top: 50px;font-size:18px;">
+                        Address: No 3/357, KAG TILES - SRI KRISHNA TRADERS TIRUPUR(Hr Sec School opp) Mangalam, Pudupalayam, Tamil Nadu 641663
+
+                        <span style="margin-top: 15px"><br>
+                        Phone Number: <b><a href="tel: 07405166463">  07405166463</a>&nbsp; | &nbsp;<a href="tel:+917228922222">+91 7228922222</a>&nbsp; | &nbsp;
+                        <a href="https://wa.me/91 7405166463?text=" target="_blank"><i class="fab fa-whatsapp wpp" style="font-size:20px;"></i> +91  7405166463</a></b><br>
+                        Email Id: <b><a href="mailto:sriktiles@gmail.com">sriktiles@gmail.com</a></b>
+                        <br><br>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-4 footer-box" style="padding:20px">
+                    <span style="color: #676767">QUICK LINKS</span><br>
+                    <a href="index.html">HOME</a> &nbsp;|&nbsp; <a href="about.html">ABOUT</a> &nbsp;|&nbsp; <a href="tiles.html">TILES</a> &nbsp;|&nbsp; <a href="gallery.html">GALLERY</a> &nbsp;|&nbsp; <a href="https://online.fliphtml5.com/rafcv/ibuk/">CATALOGUE</a> &nbsp;|&nbsp; <a href="review.html">REVIEW</a> &nbsp;|&nbsp; <a href="contact.html">CONTACT</a><br>
+                    <br>
+                    <span style="color: #676767">PRODUCTS</span><br>
+                    <p style="font-size:16px;">
+                        <a href="vitrified_tiles.html">VITRIFIED TILES</a> &nbsp;|&nbsp; <a href="mosaic_tiles.html">MOSAIC TILES</a> &nbsp;|&nbsp; <a href="glass_tiles.html">GLASS TILES</a> &nbsp;|&nbsp; <a href="marble_tiles.html">MARBLE TILES</a><br>
+                        <a href="porcelain_tiles.html">PORCELAIN TILES</a> &nbsp;|&nbsp; <a href="cement_tiles.html">CEMENT TILES</a> &nbsp;|&nbsp; <a href="wooden_tiles.html">WOODEN TILES</a><br>
+                        <br>
+                       </p>
+                </div>
+            </div>
+            <div class="copy-right pt-50" style="border-top: 1px solid rgb(51 51 51 / 22%); padding-bottom: 30px;">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12" style="padding-bottom: 10px;">
+                        <ul>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-facebook" aria-hidden="true" title="Facebook"></i></a></li>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true" title="Whatsapp"></i></a></li>
+                            <li><a href="index.html" target="_blank"><i class="fab fa-instagram" aria-hidden="true" title="Instagram"></i></a></li>
+                          <li><a href="index.html" target="_blank"><i class="fab fa-pinterest-p" aria-hidden="true" title="Pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <img src="images/certi.png" class="pull-right" alt="certificate">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section style="background:#000;padding-bottom: 10px; padding-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy-right">
+                        <a href="contact.html">Contact Us</a> &nbsp;|&nbsp; <a href="tiles.html">Tiles Map</a>
+                    </div>
+                </div>
+                <footer class="site-footer">
+        
+            <p class="copyright-text" style="text-align:right;">&copy; 2024 Sri Krishna Traders.All Rights Reserved | Designed by <a href="index.html">Company</a></p>
+       
+    </footer>
+
+</body>
+</html>
